@@ -2,6 +2,13 @@ body
     text-align: center
     background-color: #283149
 
+.container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    height: 90vh
+
 h1
     font-size: 5rem
     color: #dbedf3
@@ -11,6 +18,14 @@ h1
 footer
     color: #dbedf3
     font-family: sans-serif
+    padding: 1rem 0
+    a
+        color: #dbedf3
+        text-decoration: none
+        font-weight: bold
+        transition: color 0.3s ease-in-out
+        &:hover
+            color: #da0463
 
 .w
     background-image: url("../images/tom1.png")
