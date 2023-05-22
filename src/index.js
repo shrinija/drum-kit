@@ -1,9 +1,8 @@
 
 //detecting button press
-var drumbtnCount=document.querySelectorAll(".drum").length;
-for(var i=0;i<drumbtnCount;i++)
-{
-  document.querySelectorAll(".drum")[i].addEventListener("click",function() {
+var drumbtnCount = document.querySelectorAll(".drum").length;
+for (var i = 0; i < drumbtnCount; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     var buttonletter = this.innerHTML;
     playsound(buttonletter);
     buttonAnimation(buttonletter);
@@ -12,64 +11,62 @@ for(var i=0;i<drumbtnCount;i++)
 
 //detecting keyboard press
 
-document.addEventListener("keypress",function(event){
+document.addEventListener("keypress", function (event) {
   playsound(event.key);
   buttonAnimation(event.key);
 })
 
-function playsound(key)
-{
-  switch(key)
-  {
+function playsound(key) {
+  switch (key) {
     case "w":
-    var tom1=new Audio('sounds/tom-1.mp3');
-    tom1.play();
-    break;
+      var tom1 = new Audio('/drum-kit/sounds/tom-1.mp3');
+      tom1.play();
+      break;
 
     case "a":
-    var audio=new Audio('sounds/tom-2.mp3');
-    audio.play();
-    break;
+      var audio = new Audio('/drum-kit/sounds/tom-2.mp3');
+      audio.play();
+      break;
 
     case "s":
-    var audio=new Audio('sounds/tom-3.mp3');
-    audio.play();
-    break;
+      var audio = new Audio('/drum-kit/sounds/tom-3.mp3');
+      audio.play();
+      break;
 
     case "d":
-    var audio=new Audio('sounds/tom-4.mp3');
-    audio.play();
-    break;
+      var audio = new Audio('/drum-kit/sounds/tom-4.mp3');
+      audio.play();
+      break;
 
     case "j":
-    var audio=new Audio('sounds/snare.mp3');
-    audio.play();
-    break;
+      var audio = new Audio('/drum-kit/sounds/snare.mp3');
+      audio.play();
+      break;
 
     case "k":
-    var audio=new Audio('sounds/crash.mp3');
-    audio.play();
-    break;
+      var audio = new Audio('/drum-kit/sounds/crash.mp3');
+      audio.play();
+      break;
 
     case "l":
-    var audio=new Audio('sounds/kick.mp3');
-    audio.play();
-    break;
+      var audio = new Audio('/drum-kit/sounds/kick-bass.mp3');
+      audio.play();
+      break;
 
-    default : console.log(buttonletter);
+    default: console.log(buttonletter);
   }
 }
 
 
 
-function buttonAnimation(currentkey){
-  var activeButton=document.querySelector("."+currentkey);
+function buttonAnimation(currentkey) {
+  var activeButton = document.querySelector("." + currentkey);
   activeButton.classList.add("pressed");
 
 
-setTimeout(function(){
-  activeButton.classList.remove("pressed");
-}, 100);
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
 
 
 }
