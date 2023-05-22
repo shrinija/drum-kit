@@ -6,7 +6,7 @@ This is a Drum Kit website where users can play drums by clicking on the tiles. 
 
 ## How to Play
 
-1. Visit the [Drum Kit Website](https://your-website-url.com).
+1. Visit the [Drum Kit Website](https://prajesheleven.github.io/drum-kit/).
 2. Click on the drum tiles to play different drum sounds.
 3. Enjoy creating your own drum beats!
 
